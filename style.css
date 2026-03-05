@@ -56,16 +56,16 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3rem);font-we
 .about-text p:last-child{margin-bottom:0;}
 .about-text em{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.15rem;color:var(--rose);}
 .about-facts{display:flex;flex-direction:column;gap:14px;}
-.fact{padding:16px 20px;background:var(--beige);border-left:2px solid var(--rose-light);}
+.fact{padding:16px 20px;background:linear-gradient(180deg,var(--rose-pale),#f1d9d4);border-left:2px solid var(--rose);} 
 .fact-label{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--brown-mid);margin-bottom:5px;}
 .fact-value{font-size:.9rem;color:var(--brown);line-height:1.6;}
 
 /* PROJECTS */
-#projects{background:var(--beige);}
+#projects{background:var(--beige);} 
 .projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px;}
 .card{background:#fff;border-radius:4px;overflow:hidden;transition:transform .3s,box-shadow .3s;border:1px solid var(--beige-dark);}
 .card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(59,42,26,.1);}
-.card-img{height:160px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#3b2a1a,#c4857a);}
+.card-img{height:160px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--brown-mid),var(--rose-light));} 
 .card-img-name{font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:400;font-style:italic;color:#f7f0e6;letter-spacing:.04em;text-align:center;padding:0 20px;text-shadow:0 1px 6px rgba(0,0,0,.2);}
 .card-body{padding:24px;}
 .card-title{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--brown);margin-bottom:8px;}
@@ -88,29 +88,27 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3rem);font-we
 .service-desc{font-size:.87rem;color:#c9a99f;line-height:1.7;}
 
 /* SKILLS */
-#skills{background:#fff;}
+#skills{background:#fff;} 
 .skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:20px;}
 .skill-cat-label{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--rose);margin-bottom:10px;}
 .tags{display:flex;flex-wrap:wrap;gap:8px;}
 .tag{padding:6px 14px;background:var(--beige);border:1px solid var(--beige-dark);border-radius:2px;font-size:.78rem;color:var(--brown-mid);}
 
-/* EDUCATION */
-#education{background:var(--beige);}
+#education{background:var(--rose-pale);} 
 .edu-list{display:flex;flex-direction:column;gap:14px;}
 .edu-item{padding:20px 26px;background:#fff;border-radius:4px;border-left:2px solid var(--rose-light);display:flex;justify-content:space-between;align-items:start;gap:16px;}
 .edu-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--brown);margin-bottom:4px;}
 .edu-org{font-size:.82rem;color:var(--muted);}
 .edu-year{font-size:.78rem;letter-spacing:.1em;color:var(--rose);white-space:nowrap;}
 
-/* CONTACT */
-#contact{background:linear-gradient(160deg,var(--rose-pale) 0%,var(--beige) 100%);text-align:center;}
+#contact{background:#fff;text-align:center;}
 #contact h2{margin-bottom:16px;}
 .contact-sub{font-size:1rem;color:var(--muted);line-height:1.8;max-width:480px;margin:0 auto 40px;}
 .contact-links{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-top:16px;}
 .contact-link{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--brown-mid);font-size:.88rem;transition:color .3s;}
 .contact-link:hover{color:var(--rose);}
 
-footer{background:var(--brown);color:var(--muted);text-align:center;padding:24px;font-size:.78rem;letter-spacing:.08em;}
+footer{background:rgba(247,240,230,0.95);border-top:1px solid var(--beige-dark);color:var(--muted);text-align:center;padding:24px;font-size:.78rem;letter-spacing:.08em;}
 
 /* MOBILE */
 @media(max-width:768px){
@@ -125,6 +123,8 @@ footer{background:var(--brown);color:var(--muted);text-align:center;padding:24px
   .skills-grid{grid-template-columns:repeat(2,1fr);}
   .edu-item{flex-direction:column;gap:6px;}
   .projects-grid{grid-template-columns:1fr;}
+  /* center contact email button on mobile */
+  #contact .btn{display:block;margin:0 auto 12px;max-width:fit-content;padding-left:24px;padding-right:24px;}
 }
 @media(max-width:480px){
   .skills-grid{grid-template-columns:1fr;}
